@@ -10,6 +10,6 @@ No.     | Description | Test Method
 2.0 | The system shall have multiple competitors play in the tournament | Inspection
 3.0 | The system shall schedule games | Inspection
 3.1 | The system shall create a tournament plan or bracket | Inspection
-4.0 | The games shall be single elimination | Inspection |
+4.0 | The games shall be single elimination | Inspection 
 
 
