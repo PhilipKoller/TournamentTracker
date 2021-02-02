@@ -14,8 +14,8 @@ namespace TrackerLibrary.DataAccess.TextHelpers
     // *Convert list of strings to List<PrizeModel>
     // *Find Max id 
     // *Add new record with the new ID ( MAX + 1) 
-    // Convert prizes to list<string>
-    // Save the list<string> to the text file
+    // *Convert prizes to list<string>
+    // *Save the list<string> to the text file
     public static class TextConnectorProcessor
     {
         public static string FullFilePath( this string fileName ) // PrizeModels.csv

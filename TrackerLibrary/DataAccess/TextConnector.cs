@@ -18,7 +18,7 @@ namespace TrackerLibrary.DataAccess
             // Load the text file and convert the text to List<PrizeModel>
             List<PrizeModel> prizes = PrizesFile.FullFilePath().LoadFile().ConvertToPrizeModels();
 
-            // Find the max ID 
+            // Find the max ID and Add 1 
             int currentId = 1;
             if (prizes.Count > 0)
             {
