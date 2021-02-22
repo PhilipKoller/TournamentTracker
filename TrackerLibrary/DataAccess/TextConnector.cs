@@ -13,6 +13,12 @@ namespace TrackerLibrary.DataAccess
         // TODO - Wire up the CreatePrize for text files.
 
         private const string PrizesFile = "PrizeModels.csv";
+
+        public PersonModel CreatePerson(PersonModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         public PrizeModel CreatePrize(PrizeModel model)
         {
             // Load the text file and convert the text to List<PrizeModel>
