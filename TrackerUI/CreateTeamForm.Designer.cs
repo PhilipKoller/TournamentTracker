@@ -38,14 +38,14 @@ namespace TrackerUI
             this.selectTeamMemberLabel = new System.Windows.Forms.Label();
             this.createMemberButton = new System.Windows.Forms.Button();
             this.addNewMemberGroupBox = new System.Windows.Forms.GroupBox();
-            this.firstNameTextBox = new System.Windows.Forms.TextBox();
-            this.firstNameLabel = new System.Windows.Forms.Label();
-            this.lastNameTextBox = new System.Windows.Forms.TextBox();
-            this.lastNameLabel = new System.Windows.Forms.Label();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.emailLabel = new System.Windows.Forms.Label();
             this.cellPhoneTextBox = new System.Windows.Forms.TextBox();
             this.cellphoneLabel = new System.Windows.Forms.Label();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.lastNameTextBox = new System.Windows.Forms.TextBox();
+            this.lastNameLabel = new System.Windows.Forms.Label();
+            this.firstNameTextBox = new System.Windows.Forms.TextBox();
+            this.firstNameLabel = new System.Windows.Forms.Label();
             this.deleteMemberButton = new System.Windows.Forms.Button();
             this.createTeamButton = new System.Windows.Forms.Button();
             this.addNewMemberGroupBox.SuspendLayout();
@@ -128,6 +128,7 @@ namespace TrackerUI
             this.createMemberButton.TabIndex = 24;
             this.createMemberButton.Text = "Create Member";
             this.createMemberButton.UseVisualStyleBackColor = true;
+            this.createMemberButton.Click += new System.EventHandler(this.createMemberButton_Click);
             // 
             // addNewMemberGroupBox
             // 
@@ -148,39 +149,22 @@ namespace TrackerUI
             this.addNewMemberGroupBox.TabStop = false;
             this.addNewMemberGroupBox.Text = "Add New Member";
             // 
-            // firstNameTextBox
+            // cellPhoneTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(197, 56);
-            this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(205, 35);
-            this.firstNameTextBox.TabIndex = 11;
+            this.cellPhoneTextBox.Location = new System.Drawing.Point(197, 218);
+            this.cellPhoneTextBox.Name = "cellPhoneTextBox";
+            this.cellPhoneTextBox.Size = new System.Drawing.Size(205, 35);
+            this.cellPhoneTextBox.TabIndex = 17;
             // 
-            // firstNameLabel
+            // cellphoneLabel
             // 
-            this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F);
-            this.firstNameLabel.Location = new System.Drawing.Point(6, 41);
-            this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(187, 50);
-            this.firstNameLabel.TabIndex = 10;
-            this.firstNameLabel.Text = "First Name";
-            // 
-            // lastNameTextBox
-            // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(197, 113);
-            this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(205, 35);
-            this.lastNameTextBox.TabIndex = 13;
-            // 
-            // lastNameLabel
-            // 
-            this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F);
-            this.lastNameLabel.Location = new System.Drawing.Point(6, 100);
-            this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(185, 50);
-            this.lastNameLabel.TabIndex = 12;
-            this.lastNameLabel.Text = "Last Name";
+            this.cellphoneLabel.AutoSize = true;
+            this.cellphoneLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F);
+            this.cellphoneLabel.Location = new System.Drawing.Point(6, 203);
+            this.cellphoneLabel.Name = "cellphoneLabel";
+            this.cellphoneLabel.Size = new System.Drawing.Size(180, 50);
+            this.cellphoneLabel.TabIndex = 16;
+            this.cellphoneLabel.Text = "CellPhone";
             // 
             // emailTextBox
             // 
@@ -199,22 +183,39 @@ namespace TrackerUI
             this.emailLabel.TabIndex = 14;
             this.emailLabel.Text = "Email";
             // 
-            // cellPhoneTextBox
+            // lastNameTextBox
             // 
-            this.cellPhoneTextBox.Location = new System.Drawing.Point(197, 218);
-            this.cellPhoneTextBox.Name = "cellPhoneTextBox";
-            this.cellPhoneTextBox.Size = new System.Drawing.Size(205, 35);
-            this.cellPhoneTextBox.TabIndex = 17;
+            this.lastNameTextBox.Location = new System.Drawing.Point(197, 113);
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.Size = new System.Drawing.Size(205, 35);
+            this.lastNameTextBox.TabIndex = 13;
             // 
-            // cellphoneLabel
+            // lastNameLabel
             // 
-            this.cellphoneLabel.AutoSize = true;
-            this.cellphoneLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F);
-            this.cellphoneLabel.Location = new System.Drawing.Point(6, 203);
-            this.cellphoneLabel.Name = "cellphoneLabel";
-            this.cellphoneLabel.Size = new System.Drawing.Size(180, 50);
-            this.cellphoneLabel.TabIndex = 16;
-            this.cellphoneLabel.Text = "CellPhone";
+            this.lastNameLabel.AutoSize = true;
+            this.lastNameLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F);
+            this.lastNameLabel.Location = new System.Drawing.Point(6, 100);
+            this.lastNameLabel.Name = "lastNameLabel";
+            this.lastNameLabel.Size = new System.Drawing.Size(185, 50);
+            this.lastNameLabel.TabIndex = 12;
+            this.lastNameLabel.Text = "Last Name";
+            // 
+            // firstNameTextBox
+            // 
+            this.firstNameTextBox.Location = new System.Drawing.Point(197, 56);
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.Size = new System.Drawing.Size(205, 35);
+            this.firstNameTextBox.TabIndex = 11;
+            // 
+            // firstNameLabel
+            // 
+            this.firstNameLabel.AutoSize = true;
+            this.firstNameLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F);
+            this.firstNameLabel.Location = new System.Drawing.Point(6, 41);
+            this.firstNameLabel.Name = "firstNameLabel";
+            this.firstNameLabel.Size = new System.Drawing.Size(187, 50);
+            this.firstNameLabel.TabIndex = 10;
+            this.firstNameLabel.Text = "First Name";
             // 
             // deleteMemberButton
             // 
