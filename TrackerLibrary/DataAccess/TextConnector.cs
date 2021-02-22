@@ -35,5 +35,10 @@ namespace TrackerLibrary.DataAccess
 
             return model;
         }
+
+        PersonModel IDataConnection.CreatePerson(PersonModel model)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
